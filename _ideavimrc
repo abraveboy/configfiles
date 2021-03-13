@@ -1,0 +1,52 @@
+syntax enable
+syntax on
+
+let mapleader=" "
+
+" Plugins ----------------
+set surround
+set multiple-cursors
+set commentary
+set easymotion
+set highlightedyank
+
+" Common Settings -------------
+set number
+set relativenumber
+set scrolloff=5
+set showmode
+set showcmd
+set wildmenu
+
+" earching options
+set hlsearch
+exec "nohlsearch"
+set incsearch
+set ignorecase
+set smartcase
+
+
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+map <leader>rc :e C:\Users\admin\_ideavimrc<CR>
+map <leader><CR> :nohlsearch<CR>
+
+""" ideavim unique function
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>n <Action>(GotoNextError)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+
+noremap J 5j
+noremap K 5k
+
+""" highlightedyank
+let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
